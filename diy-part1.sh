@@ -73,13 +73,13 @@ git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git
 git clone -b main https://github.com/sirpdboy/luci-app-advancedplus.git
 cd ..
 
-#rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-bootstrap
 
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
-###### 取消bootstrap为默认主题 ######
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+
 
 # 拉取 immortalwrt master 源码
 git clone -b openwrt-23.05 https://github.com/immortalwrt/immortalwrt.git iwrt
@@ -97,7 +97,7 @@ rm -rf iwrt
 
 #克隆passwall环境插件
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
-sed -i 's/1.8.7/1.8.6/g' package/pwpage/openwrt-passwall-packages/xray-plugin/Makefile   # 修改默认ip
+sed -i 's/1.8.7/1.8.6/g' package/pwpage/xray-plugin/Makefile   # 修改版本
 
 #克隆的源码放在small文件夹,预先建立small文件夹
 mkdir package/small
