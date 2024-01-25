@@ -26,7 +26,7 @@
 #sed -i '/routing/s/^/#/' feeds.conf.default
 #sed -i '/packages/s/^/#/' feeds.conf.default
 
-#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 #sed -i '$a src-git lede_luci https://github.com/coolsnowwolf/luci' feeds.conf.default
 #sed -i '$a src-git packages https://github.com/coolsnowwolf/packages' feeds.conf.default
 #sed -i '$a src-git luci https://github.com/coolsnowwolf/luci' feeds.conf.default
@@ -104,12 +104,12 @@ rm -rf iwrt
 
 
 #克隆passwall环境插件
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
-sed -i 's/1.8.7/1.8.6/g' package/pwpage/xray-plugin/Makefile   # 修改版本
+#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
+#sed -i 's/1.8.7/1.8.6/g' package/pwpage/xray-plugin/Makefile   # 修改版本
 
 #克隆的源码放在small文件夹,预先建立small文件夹
-mkdir package/small
-pushd package/small
+mkdir package/small1
+pushd package/small1
 
 #克隆源码
 
