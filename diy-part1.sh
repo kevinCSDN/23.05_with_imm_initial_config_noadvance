@@ -76,6 +76,7 @@ cd ..
 #删除feeds自带mosdns、v2ray-geodata
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/packages/net/xray-core
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-Bootstrap
 rm -rf feeds/luci/themes/luci-theme-BootstrapDark
