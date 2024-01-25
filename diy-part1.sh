@@ -66,6 +66,7 @@ rm -rf openwrt-packages
 #rm -rf luci1
 
 
+
 cd package
 git clone https://github.com/f8q8/luci-app-autoreboot.git
 git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git
@@ -76,6 +77,9 @@ rm -rf feeds/luci/themes/luci-theme-argon
 
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+
+###### 取消bootstrap为默认主题 ######
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 拉取 immortalwrt master 源码
 git clone -b openwrt-23.05 https://github.com/immortalwrt/immortalwrt.git iwrt
