@@ -73,7 +73,7 @@ git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git
 git clone -b main https://github.com/sirpdboy/luci-app-advancedplus.git
 cd ..
 
-rm -rf feeds/luci/themes/luci-theme-argon
+#rm -rf feeds/luci/themes/luci-theme-argon
 
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
